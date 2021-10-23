@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { JobSeeker } from '../jobseeker';
+import { JobSeeker } from '../job-seeker';
 
 @Component({
   selector: 'app-jobseeker',

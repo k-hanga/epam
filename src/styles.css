@@ -11,6 +11,10 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+.outer {
+  margin-top: 4.2rem;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

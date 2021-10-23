@@ -1,8 +1,22 @@
+<div class="container">
+  <div class="col">
+    <div class="row">
+      <h1>Job Details</h1>
+    </div>
+  </div>
+  <div class="col-7">
+    <div class="row">{{employer.company_name}}</div>
+    <div class="row">{{employer.name}}</div>
+  </div>
+  <div class="col-5">
+    <div class="row">{{job.hourly_rate}}</div>
+  </div>
+</div>
+<button (click)="goBack()">Back</button>
 <span class="job_name">{{job.name}}</span>
-<span class="job_hourly_rate">{{job.hourly_rate}} JMF/óra</span>
+<span class="job_hourly_rate">{{job.hourly_rate}} HUF/h</span>
 <span class="job_employer_name"></span>
 <span class="job_employer_company"></span>
 <span class="job_description">{{job.description}}</span>
 <span class="job_category">{{job.category_id}}</span>
 <span class="job_skill_level">{{job.skill_level}}</span>
-<button (click)="goBack()">go back</button>

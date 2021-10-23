@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { JobSeeker } from '../jobseeker';
-import { JobseekerService } from '../jobseeker.service';
+import { JobSeeker } from '../job-seeker';
+import { JobSeekerService } from '../job-seeker.service';
 import { MessageService } from '../message.service';
 import { AppComponent } from '../app.component';
 
@@ -17,7 +17,7 @@ export class LandingComponent implements OnInit {
     this.messageService.add(`LandingComponent: Selected jobseeker id=${jobseeker.id}`);
   }
   constructor(
-    private jobseekerService: JobseekerService,
+    private jobseekerService: JobSeekerService,
     private messageService: MessageService,
     private app: AppComponent
   ) { }

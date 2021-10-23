@@ -1,6 +1,8 @@
-<div class="container">
+<app-navbar></app-navbar>
+<div class="container outer">
+  <h1 class="text-center">Job Opportunities</h1>
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-xl-3">
-    <div class="col mb-4"  *ngFor="let job of jobs" >
+    <div class="col mb-4" *ngFor="let job of jobs" >
       <div class="card shadow-sm no-padding h-100">
         <div class="card-header d-flex justify-content-between align-items-center">
           <h3 class="card-title">{{job.name}}</h3>
