@@ -5,8 +5,8 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverter
 
-@Entity(tableName = "jobitem")
-data class JobItem(
+@Entity(tableName = "appliedjobitem")
+data class AppliedJobItem(
     @ColumnInfo(name = "id") @PrimaryKey(autoGenerate = true) var id: Long?,
     @ColumnInfo(name = "name") val name: String,
     @ColumnInfo(name = "category") val category: Category,

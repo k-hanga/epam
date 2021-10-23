@@ -1,7 +1,7 @@
 package com.example.epamapp.fragment
 
 import com.example.epamapp.R
-import com.example.epamapp.data.JobItem
+import com.example.epamapp.data.AppliedJobItem
 import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Context
@@ -21,7 +21,7 @@ class NewJobItemDialogFragment : DialogFragment() {
     private lateinit var etLevel: EditText
 
     interface NewJobItemDialogListener {
-        fun onJobItemCreated(newItem: JobItem)
+        fun onJobItemCreated(newItem: AppliedJobItem)
     }
 
     private lateinit var listener: NewJobItemDialogListener
@@ -74,13 +74,13 @@ class NewJobItemDialogFragment : DialogFragment() {
         return ("$year.$month.$day")
     }
 
-    private fun getJobItem() = JobItem(
+    private fun getJobItem() = AppliedJobItem(
         id = null,
         name = etJobName.text.toString(),
-        category = JobItem.Category.getByOrdinal(
+        category = AppliedJobItem.Category.getByOrdinal(
             spinnerJobItemCategory.selectedItemPosition
         )
-            ?: JobItem.Category.PHYSICAL,
+            ?: AppliedJobItem.Category.PHYSICAL,
         date = dateToString(dpDate),
         level = etLevel.text.toString()
     )
