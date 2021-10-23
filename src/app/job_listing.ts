@@ -6,7 +6,7 @@ export const JOB_LISTING: Job[] = [
     name: 'Disznóvágás',
     hourly_rate: 600,
     employer_id: 0,
-    description: 'Vasárnap hajnal 4-kor, az Infopark alatti töltésnél le kéne vágni 2 disznót AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa',
+    description: 'Vasárnap hajnal 4-kor, az Infopark alatti töltésnél le kéne vágni 2 disznót AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
     category_id: 0,
     skill_level: 3
   },

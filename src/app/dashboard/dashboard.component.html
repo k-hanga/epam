@@ -1,26 +1,19 @@
-<!--<div class="album">-->
-  <div class="container">
-    <!--<h2 class="text-center">Job listing</h2>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 d-flex align-items-stretch">-->
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-xl-3">
-          <div class="col mb-4"  *ngFor="let job of jobs" >
-          <div class="card shadow-sm no-padding h-100">
-            <div class="card-header d-flex justify-content-between align-items-center">
-              <h3 class="card-title">{{job.name}}</h3>
-              <small class="card-text text-muted"><b>{{job.hourly_rate | number:'1.0-3':''}} HUF/h</b></small>
-            </div>
-            <div class="card-body">
-              <p class="card-text job-description">{{job.description}}</p>
-            </div>
-            <div class="card-footer d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <a class="btn btn-sm btn-outline-secondary" routerLink="/job/{{job.id}}">Details</a>
-                <a class="btn btn-sm btn-outline-secondary">Apply</a>
-              </div>
-              <small class="card-text text-muted">{{job.category_id}}</small>
-            </div>
-          </div>
+<div class="container">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-xl-3">
+    <div class="col mb-4"  *ngFor="let job of jobs" >
+      <div class="card shadow-sm no-padding h-100">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h3 class="card-title">{{job.name}}</h3>
+          <small class="card-text text-muted"><b>{{job.hourly_rate | number:'1.0-3':''}} HUF/h</b></small>
         </div>
+        <div class="card-body">
+          <p class="card-text job-description">{{job.description}}</p>
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-center">
+          <a class="btn btn-sm btn-outline-secondary" routerLink="/job/{{job.id}}">Details</a>
+          <small class="card-text text-muted">{{job.category_id}}</small>
+        </div>
+      </div>
     </div>
-  <!--</div>
-</div>-->
+  </div>
+</div>
