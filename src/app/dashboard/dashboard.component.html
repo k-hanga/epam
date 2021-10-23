@@ -1,0 +1,27 @@
+<h2>Job listing</h2>
+<div class="album">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <a *ngFor="let job of jobs" >
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <h3 class="card-text">{{job.name}}</h3>
+                <small class="text-muted"><b>{{job.hourly_rate | number:'1.0-3':''}} HUF/h</b></small>
+              </div>
+              <p class="card-text job-description">{{job.description}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-secondary" type="button" routerLink="/job/{{job.id}}">Details</button>
+                  <button class="btn btn-sm btn-outline-secondary" type="button">Apply</button>
+                </div>
+                <small class="text-muted">{{job.category_id}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

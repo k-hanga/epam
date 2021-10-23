@@ -1,0 +1,8 @@
+<div *ngIf="jobseeker">
+  <h2>{{jobseeker.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{jobseeker.id}}</div>
+  <div>
+    <label for="jobseeker-name">Munkavállaló neve: </label>
+    <input id="jobseeker-name" [(ngModel)]="jobseeker.name" placeholder="Név">
+  </div>
+</div>

@@ -1,0 +1,9 @@
+span {
+  display: block;
+}
+.job_name, .job_hourly_rate, .job_category, .job_skill_level {
+  display: inline-block;
+}
+.job_hourly_rate, .job_skill_level {
+  float: right;
+}
