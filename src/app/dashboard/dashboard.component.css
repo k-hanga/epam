@@ -1,9 +1,6 @@
-span {
-  display: block;
+.no-padding {
+  padding: 0;
 }
-.job_name, .job_hourly_rate, .job_category, .job_skill_level {
-  display: inline-block;
-}
-.job_hourly_rate, .job_skill_level {
-  float: right;
+.card-title {
+  margin-bottom: -0.25rem;
 }
