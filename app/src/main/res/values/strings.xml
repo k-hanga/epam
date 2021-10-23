@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">epamApp</string>
+    <string name="cancel">CANCEL</string>
+    <string name="save">SAVE</string>
+    <string-array name="category_items">
+        <item>PHYSICAL</item>
+        <item>NONPHYSICAL</item>
+    </string-array>
+</resources>
