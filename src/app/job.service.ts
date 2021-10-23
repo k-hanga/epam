@@ -12,6 +12,7 @@ export class JobService {
     return of(JobList);
   }
   getJob(id: number): Observable<Job> {
+    // TODO
     const job = JobList.find(j => j.id === id)!;
     return of(job);
   }
