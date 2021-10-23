@@ -1,33 +1,33 @@
 package com.example.epamapp.adapter
 
-class OfferedJobAdapter {
-}
-
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
+import com.example.epamapp.R
+import com.example.epamapp.data.OfferedJobItem
 
-class ToDoAdapter(private val listener: ToDoItemClickListener) :
-    RecyclerView.Adapter<ToDoAdapter.ToDoViewHolder>() {
+class OfferedJobAdapter(private val listener: OfferedJobItemClickListener) :
+    RecyclerView.Adapter<OfferedJobAdapter.OfferedJobViewHolder>() {
 
-    private val items = mutableListOf<ToDoItem>()
+    private val items = mutableListOf<OfferedJobItem>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ToDoViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OfferedJobViewHolder {
         val itemView: View = LayoutInflater
             .from(parent.context)
-            .inflate(R.layout.item_todo_list, parent, false)
-        return ToDoViewHolder(itemView)
+            .inflate(R.layout.item_job_list, parent, false)
+        return OfferedJobViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: ToDoViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: OfferedJobViewHolder, position: Int) {
         val item = items[position]
-        holder.nameTextView.text = item.name
-        holder.dateTextView.text=item.date
-        holder.categoryTextView.text = item.category.name
-        holder.isDoneCheckBox.isChecked = item.isDone
+        holder.twJobItemName.text = item.name
+        holder.twJobItemDescription.text = item.name
+        holder.twJobItemCompany.text = item.name
+        holder.twJobDate.text=item.date
+        holder.twJobDate.text=item.date
+        holder.twJobItemCategory.text = item.category.name
 
         holder.item = item
     }
@@ -36,57 +36,50 @@ class ToDoAdapter(private val listener: ToDoItemClickListener) :
         return items.size
     }
 
-    fun addItem(item: ToDoItem) {
+    fun addItem(item: OfferedJobItem) {
         items.add(item)
         notifyItemInserted(items.size - 1)
     }
 
-    fun deleteItem(item: ToDoItem){
+    fun deleteItem(item: OfferedJobItem){
         val position=items.indexOf(item)
         items.removeAt(position)
         notifyItemRemoved(position)
     }
 
-    fun update(todoItems: List<ToDoItem>) {
+    fun update(offeredJobItems: List<OfferedJobItem>) {
         items.clear()
-        items.addAll(todoItems)
+        items.addAll(offeredJobItems)
         notifyDataSetChanged()
     }
 
-    interface ToDoItemClickListener {
-        fun onItemChanged(item: ToDoItem)
-        fun onItemDeleted(item: ToDoItem)
+    interface OfferedJobItemClickListener {
+        fun onItemChanged(item: OfferedJobItem)
+        fun onItemDeleted(item: OfferedJobItem)
     }
 
-    inner class ToDoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    inner class OfferedJobViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
-        val nameTextView: TextView
-        val dateTextView: TextView
-        val categoryTextView: TextView
-        val isDoneCheckBox: CheckBox
-        private val removeButton: ImageButton
+        val twJobItemName: TextView
+        val twJobItemDescription: TextView
+        val twJobItemCompany: TextView
+        val twJobDate: TextView
+        val twJobItemCategory: TextView
 
-        var item: ToDoItem? = null
+        var item: OfferedJobItem? = null
 
         init {
-            nameTextView = itemView.findViewById(R.id.ToDoItemNameTextView)
-            dateTextView = itemView.findViewById(R.id.ToDoItemDateTextView)
-            categoryTextView = itemView.findViewById(R.id.ToDoItemCategoryTextView)
-            isDoneCheckBox = itemView.findViewById(R.id.ToDoItemIsDoneCheckBox)
-            removeButton = itemView.findViewById(R.id.ToDoItemRemoveButton)
-            removeButton.setOnClickListener{
+            twJobItemName = itemView.findViewById(R.id.twJobItemName)
+            twJobItemDescription = itemView.findViewById(R.id.twJobItemDescription)
+            twJobItemCompany = itemView.findViewById(R.id.twJobItemCompany)
+            twJobDate = itemView.findViewById(R.id.twJobDate)
+            twJobItemCategory = itemView.findViewById(R.id.twJobItemCategory)
+
+            /*removeButton.setOnClickListener{
                 @Suppress("DEPRECATION")
                 listener.onItemDeleted(items[position])
-            }
-            isDoneCheckBox.setOnCheckedChangeListener { _, isDone ->
-                item?.let {
-                    val newItem = it.copy(
-                        isDone = isDone
-                    )
-                    item = newItem
-                    listener.onItemChanged(newItem)
-                }
-            }
+            }*/
+
         }
     }
 }
