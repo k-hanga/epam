@@ -20,27 +20,31 @@ public class JobController {
     
     // Aggregate root
     // tag::get-aggregate-root[]
-    @GetMapping("/jobs")
+    @CrossOrigin
+    @GetMapping("/api/jobs")
     List<Job> all() {
         return repository.findAll();
     }
     // end::get-aggregate-root[]
 
-    @PostMapping("/jobs")
+    @CrossOrigin
+    @PostMapping("/api/jobs")
     Job newJob(@RequestBody Job newJob) {
         return repository.save(newJob);
     }
 
     // Single item
 
-    @GetMapping("/jobs/{id}")
+    @CrossOrigin
+    @GetMapping("/api/jobs/{id}")
     Job one(@PathVariable Long id) {
 
         return repository.findById(id)
                 .orElseThrow(() -> new JobNotFoundException(id));
     }
 
-    @PutMapping("/jobs/{id}")
+    @CrossOrigin
+    @PutMapping("/api/jobs/{id}")
     Job replaceJob(@RequestBody Job newJob, @PathVariable Long id) {
 
         return repository.findById(id)
@@ -54,7 +58,8 @@ public class JobController {
                 });
     }
 
-    @DeleteMapping("/jobs/{id}")
+    @CrossOrigin
+    @DeleteMapping("/api/jobs/{id}")
     void deleteJob(@PathVariable Long id) {
         repository.deleteById(id);
     }

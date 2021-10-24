@@ -61,27 +61,31 @@ public class UserController {
 
     // Aggregate root
     // tag::get-aggregate-root[]
-    @GetMapping("/users")
+    @CrossOrigin
+    @GetMapping("/api/users")
     List<User> all() {
         return repository.findAll();
     }
     // end::get-aggregate-root[]
 
-    @PostMapping("/users")
+    @CrossOrigin
+    @PostMapping("/api/users")
     User newUser(@RequestBody User newUser) {
         return repository.save(newUser);
     }
 
     // Single item
 
-    @GetMapping("/users/{id}")
+    @CrossOrigin
+    @GetMapping("/api/users/{id}")
     User one(@PathVariable Long id) {
 
         return repository.findById(id)
                 .orElseThrow(() -> new UserNotFoundException(id));
     }
 
-    @PutMapping("/users/{id}")
+    @CrossOrigin
+    @PutMapping("/api/users/{id}")
     User replaceUser(@RequestBody User newUser, @PathVariable Long id) {
 
         return repository.findById(id)
@@ -95,7 +99,8 @@ public class UserController {
                 });
     }
 
-    @DeleteMapping("/users/{id}")
+    @CrossOrigin
+    @DeleteMapping("/api/users/{id}")
     void deleteUser(@PathVariable Long id) {
         repository.deleteById(id);
     }

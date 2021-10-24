@@ -1,6 +1,7 @@
 package com.gyorik.junctionx.controller;
 
 import com.gyorik.junctionx.domain.Skill;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,7 +29,8 @@ public class SkillController {
 
     // Aggregate root
     // tag::get-aggregate-root[]
-    @GetMapping("/skills")
+    @CrossOrigin
+    @GetMapping("/api/skills")
     List<Skill> all() {
         return convertArrayToList(Skill.values());
     }
