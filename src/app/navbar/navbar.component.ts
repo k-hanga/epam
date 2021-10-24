@@ -11,6 +11,7 @@ export class NavbarComponent implements OnInit {
   constructor(private app: AppComponent) { }
 
   ngOnInit() {
+    console.error(localStorage.getItem('userId'));
   }
 
 }

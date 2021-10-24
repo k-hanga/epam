@@ -1,8 +1,6 @@
-<app-navbar></app-navbar>
 <div class="form-signin">
   <form>
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
+    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Log in</p>
     <div class="form-floating">
       <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
       <label for="floatingInput">Email address</label>
@@ -17,6 +15,13 @@
         <input type="checkbox" value="remember-me" disabled="disabled"> Remember me
       </label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <div class="form-group d-flex flex-row align-items-center mb-4">
+      <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+        <button type="button" class="btn btn-primary btn-lg" (click)="onLogin()" routerLink="/dashboard">Log in</button>
+      </div>
+      <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+        <button type="button" class="btn btn-outline-primary btn-lg" routerLink="/landing">Back</button>
+      </div>
+    </div>
   </form>
 </div>
