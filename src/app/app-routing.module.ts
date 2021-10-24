@@ -9,11 +9,14 @@ import { RegisterEmployerComponent } from './register-employer/register-employer
 import { RegisterJobSeekerComponent } from './register-job-seeker/register-job-seeker.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CourseComponent } from './course/course.component';
+import { CourseEmployerComponent } from './course-employer/course-employer.component';
+import { DashboardEmployerComponent } from './dashboard-employer/dashboard-employer.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
   { path: 'landing', component: LandingComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'dashboard-employer', component: DashboardEmployerComponent },
   { path: 'job/:id', component: JobDetailsComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
@@ -21,6 +24,7 @@ const routes: Routes = [
   { path: 'register_job_seeker', component: RegisterJobSeekerComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'courses', component: CourseComponent },
+  { path: 'course-employer', component: CourseEmployerComponent },
 ];
 
 @NgModule({
