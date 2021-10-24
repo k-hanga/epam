@@ -15,5 +15,4 @@ export class LoginComponent implements OnInit {
   onLogin(): void {
     sessionStorage.setItem('userId', '5');
   }
-
 }
