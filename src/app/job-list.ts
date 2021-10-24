@@ -1,6 +1,6 @@
 import { Job } from './job';
 
-export const JobList: Job[] = [
+/*export const JobList: Job[] = [
   {
     id: 0,
     name: 'Disznóvágás',
@@ -38,3 +38,4 @@ export const JobList: Job[] = [
     skill_level: 2
   }
 ];
+*/

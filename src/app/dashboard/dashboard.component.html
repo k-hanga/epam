@@ -5,15 +5,15 @@
     <div class="col mb-4" *ngFor="let job of jobs" >
       <div class="card shadow-sm no-padding h-100">
         <div class="card-header d-flex justify-content-between align-items-center">
-          <h3 class="card-title">{{job.name}}</h3>
-          <small class="card-text text-muted"><b>{{job.hourly_rate | number:'1.0-3':''}} HUF/h</b></small>
+          <h3 class="card-title">{{job.summary}}</h3>
+          <small class="card-text text-muted"><b>{{job.payment | number:'1.0-3':''}} HUF/h</b></small>
         </div>
         <div class="card-body">
           <p class="card-text job-description">{{job.description}}</p>
         </div>
         <div class="card-footer d-flex justify-content-between align-items-center">
           <a class="btn btn-sm btn-outline-secondary" routerLink="/job/{{job.id}}">Details</a>
-          <small class="card-text text-muted">{{job.category_id}}</small>
+          <small class="card-text text-muted">{{job.requiredSkills}}</small>
         </div>
       </div>
     </div>
