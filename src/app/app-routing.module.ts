@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'register_employer', component: RegisterEmployerComponent },
   { path: 'register_job_seeker', component: RegisterJobSeekerComponent },
   { path: 'profile', component: ProfileComponent },
+  //{ path: 'profile', component: ProfileComponent },
   { path: 'courses', component: CourseComponent },
   { path: 'course-employer', component: CourseEmployerComponent },
 ];
