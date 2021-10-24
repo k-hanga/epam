@@ -14,6 +14,7 @@ export class NavbarUserComponent implements OnInit {
   }
 
   signOut(): void {
+    sessionStorage.removeItem('userId');
   }
 
 

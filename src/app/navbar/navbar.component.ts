@@ -7,11 +7,14 @@ import { AppComponent } from '../app.component';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+  public loggedin: boolean;
   constructor(private app: AppComponent) { }
 
   ngOnInit() {
-    console.error(localStorage.getItem('userId'));
+    console.error(sessionStorage.getItem('userId'));
   }
 
+  isLoggedIn(): boolean {
+    return sessionStorage.getItem('userId') === null;
+  }
 }

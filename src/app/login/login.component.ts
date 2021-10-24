@@ -12,9 +12,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  onLogin() : void
-  {
-    localStorage.setItem('userId', "5");
+  onLogin(): void {
+    sessionStorage.setItem('userId', '5');
   }
 
 }

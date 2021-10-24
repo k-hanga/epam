@@ -18,6 +18,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterJobSeekerComponent } from './register-job-seeker/register-job-seeker.component';
 import { RegisterEmployerComponent } from './register-employer/register-employer.component';
 import { NavbarUserComponent } from './navbar-user/navbar-user.component';
+import { NavbarAnonComponent } from './navbar-anon/navbar-anon.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NavbarUserComponent } from './navbar-user/navbar-user.component';
     NavbarComponent,
     RegisterJobSeekerComponent,
     RegisterEmployerComponent,
-    NavbarUserComponent
+    NavbarUserComponent,
+    NavbarAnonComponent
   ],
   imports: [
     BrowserModule,
