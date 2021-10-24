@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
@@ -14,6 +15,8 @@ import { RegisterComponent } from './register/register.component';
 import { VerifyComponent } from './verify/verify.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RegisterJobSeekerComponent } from './register-job-seeker/register-job-seeker.component';
+import { RegisterEmployerComponent } from './register-employer/register-employer.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +30,15 @@ import { NavbarComponent } from './navbar/navbar.component';
     RegisterComponent,
     VerifyComponent,
     ProfileComponent,
-    NavbarComponent
+    NavbarComponent,
+    RegisterJobSeekerComponent,
+    RegisterEmployerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
