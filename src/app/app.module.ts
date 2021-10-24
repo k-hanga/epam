@@ -20,6 +20,8 @@ import { RegisterEmployerComponent } from './register-employer/register-employer
 import { NavbarUserComponent } from './navbar-user/navbar-user.component';
 import { NavbarAnonComponent } from './navbar-anon/navbar-anon.component';
 import { CourseComponent } from './course/course.component';
+import { DashboardEmployerComponent } from './dashboard-employer/dashboard-employer.component';
+import { CourseEmployerComponent } from './course-employer/course-employer.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { CourseComponent } from './course/course.component';
     RegisterEmployerComponent,
     NavbarUserComponent,
     NavbarAnonComponent,
-    CourseComponent
+    CourseComponent,
+    DashboardEmployerComponent,
+    CourseEmployerComponent
   ],
   imports: [
     BrowserModule,

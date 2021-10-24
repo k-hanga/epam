@@ -15,6 +15,6 @@ export class CourseComponent implements OnInit {
     this.getCourses();
   }
   getCourses(): void {
-  //  this.courseService.getCourses().subscribe(courses => this.courses = courses.slice(0, 20));
+    this.courseService.getCourses().subscribe(courses => this.courses = courses.slice(0, 20));
   }
 }
