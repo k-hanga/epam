@@ -36,4 +36,8 @@ export class JobDetailsComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+  apply(): void {
+    // TODO HttpRequest to database
+    this.goBack();
+  }
 }
