@@ -11,7 +11,7 @@
       <div class="row"><p><!--{{employer.name}}--></p></div>
     </div>
     <div class="col-6 text-end">
-      <div class="row"><p>{{job.payment}}</p></div>
+      <div class="row"><p>{{job.payment | number:'1.0-3'}} HUF/h</p></div>
     </div>
     <div class="col-6 text-start">
       <div class="row"><p>{{job.startDate | date : 'medium'}} — {{job.endDate | date : 'medium'}}</p></div>
@@ -25,12 +25,12 @@
     <div class="col-12">
       <div class="skill" *ngFor="let skill of job.requiredSkills">{{skill}}</div>
     </div>
+    <div class="col-6 text-start">
+      <p *ngIf="job.status === 'SEARCHING'; else elseBlock">Open until {{job.deadline | date: 'medium'}}</p><ng-template #elseBlock><p>Closed</p></ng-template>
+    </div>
   </div>
 </div>
 
 <div>{{job.employer}}</div>
 <div>{{job.applicants}}</div>
-<div></div>
 <div>{{job.requiredXp}}</div>
-<div>{{job.status}}</div>
-<div>{{job.deadline}}</div>
