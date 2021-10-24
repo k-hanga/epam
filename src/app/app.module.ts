@@ -17,6 +17,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterJobSeekerComponent } from './register-job-seeker/register-job-seeker.component';
 import { RegisterEmployerComponent } from './register-employer/register-employer.component';
+import { NavbarUserComponent } from './navbar-user/navbar-user.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RegisterEmployerComponent } from './register-employer/register-employer
     ProfileComponent,
     NavbarComponent,
     RegisterJobSeekerComponent,
-    RegisterEmployerComponent
+    RegisterEmployerComponent,
+    NavbarUserComponent
   ],
   imports: [
     BrowserModule,

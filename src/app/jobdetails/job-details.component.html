@@ -1,34 +1,36 @@
-<!--div class="container">
-  <div class="col">
-    <div class="row">
-      <h1>Job Details</h1>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-12">
+      <div class="row">
+        <h1>Job Details</h1>
+        <h3>{{job.summary}}</h3>
+      </div>
+    </div>
+    <div class="col-6 text-start">
+      <div class="row"><p><!--{{employer.company_name}}--></p></div>
+      <div class="row"><p><!--{{employer.name}}--></p></div>
+    </div>
+    <div class="col-6 text-end">
+      <div class="row"><p>{{job.payment}}</p></div>
+    </div>
+    <div class="col-6 text-start">
+      <div class="row"><p>{{job.startDate | date : 'medium'}} — {{job.endDate | date : 'medium'}}</p></div>
+    </div>
+    <div class="col-6 text-end">
+      <div class="row"><p>{{job.location}}</p></div>
+    </div>
+    <div class="col-12">
+      <div class="row"><p>{{job.description}}</p></div>
+    </div>
+    <div class="col-12">
+      <div class="skill" *ngFor="let skill of job.requiredSkills">{{skill}}</div>
     </div>
   </div>
-  <div class="col-7">
-    <div class="row">{{employer.company_name}}</div>
-    <div class="row">{{employer.name}}</div>
-  </div>
-  <div class="col-5">
-    <div class="row">{{job.hourly_rate}}</div>
-  </div>
 </div>
-<button type="button" class="btn btn-link" (click)="goBack()">Back</button>
-<span class="job_name">{{job.name}}</span>
-<span class="job_hourly_rate">{{job.hourly_rate}} HUF/h</span>
-<span class="job_employer_name"></span>
-<span class="job_employer_company"></span>
-<span class="job_description">{{job.description}}</span>
-<span class="job_category">{{job.category_id}}</span>
-<span class="job_skill_level">{{job.skill_level}}</span>-->
-<div>{{job.summary}}</div>
-<div>{{job.description}}</div>
+
 <div>{{job.employer}}</div>
 <div>{{job.applicants}}</div>
-<div>{{job.startDate}}</div>
-<div>{{job.endDate}}</div>
-<div>{{job.location}}</div>
-<div>{{job.requiredSkills}}</div>
+<div></div>
 <div>{{job.requiredXp}}</div>
 <div>{{job.status}}</div>
-<div>{{job.payment}}</div>
 <div>{{job.deadline}}</div>
