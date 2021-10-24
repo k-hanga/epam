@@ -43,7 +43,7 @@ export class JobService {
     );
   }
   updateJob(job: Job): Observable<any> {
-    return this.http.put(this.jobsURL, job, this.httpOptions).pipe(
+    return this.http.put(`${this.jobsURL}/${job.id}`, job, this.httpOptions).pipe(
       tap(_ => this.log(`Updated job#${job.summary}`)),
       catchError(this.handleError<any>('updateJob'))
     );
