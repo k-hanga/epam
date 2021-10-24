@@ -48,4 +48,10 @@ export class JobService {
       catchError(this.handleError<any>('updateJob'))
     );
   }
+  createJob(job: Job): Observable<any> {
+    return this.http.post(`${this.jobsURL}`, job, this.httpOptions).pipe(
+      tap(_ => this.log(`Created job#${job.summary}`)),
+      catchError(this.handleError<any>('createJob'))
+    );
+  }
 }
