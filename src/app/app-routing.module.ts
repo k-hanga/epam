@@ -7,6 +7,8 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterEmployerComponent } from './register-employer/register-employer.component';
 import { RegisterJobSeekerComponent } from './register-job-seeker/register-job-seeker.component';
+import { ProfileComponent } from './profile/profile.component';
+import { CourseComponent } from './course/course.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register_employer', component: RegisterEmployerComponent },
   { path: 'register_job_seeker', component: RegisterJobSeekerComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'courses', component: CourseComponent },
 ];
 
 @NgModule({

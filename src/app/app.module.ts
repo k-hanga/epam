@@ -19,6 +19,7 @@ import { RegisterJobSeekerComponent } from './register-job-seeker/register-job-s
 import { RegisterEmployerComponent } from './register-employer/register-employer.component';
 import { NavbarUserComponent } from './navbar-user/navbar-user.component';
 import { NavbarAnonComponent } from './navbar-anon/navbar-anon.component';
+import { CourseComponent } from './course/course.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { NavbarAnonComponent } from './navbar-anon/navbar-anon.component';
     RegisterJobSeekerComponent,
     RegisterEmployerComponent,
     NavbarUserComponent,
-    NavbarAnonComponent
+    NavbarAnonComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule,
